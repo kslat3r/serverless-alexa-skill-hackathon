@@ -69,7 +69,7 @@ functions:
 #      - schedule: rate(10 minutes)
 #      - sns: greeter-topic
 #      - stream: arn:aws:dynamodb:region:XXXXXX:table/foo/stream/1970-01-01T00:00:00.000
-      - alexaSkill: amzn1.ask.skill.c832e16f-5e87-49a8-802c-9dca6e79d9c4
+#      - alexaSkill
 #      - alexaSmartHome: amzn1.ask.skill.xx-xx-xx-xx
 #      - iot:
 #          sql: "SELECT * FROM 'some_topic'"
