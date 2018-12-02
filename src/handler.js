@@ -48,5 +48,5 @@ const skillBuilder = alexa.SkillBuilders.custom();
 
 module.exports.randomFact = skillBuilder
   .addRequestHandlers(randomFactHandler)
-  .addErrorHandler(errorHandler)
+  .addErrorHandlers(errorHandler)
   .lambda();
