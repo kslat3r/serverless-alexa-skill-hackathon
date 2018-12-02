@@ -1,14 +1,28 @@
 'use strict';
 
-module.exports.hello = async (event, context) => {
-  return {
-    statusCode: 200,
-    body: JSON.stringify({
-      message: 'Go Serverless v1.0! Your function executed successfully!',
-      input: event,
-    }),
-  };
+const request = require('request-promise');
 
-  // Use this code if you don't use the http event with the LAMBDA-PROXY integration
-  // return { message: 'Go Serverless v1.0! Your function executed successfully!', event };
+module.exports.randomFact = async (event, context) => {
+  let response;
+
+  try {
+    response = await request('http://randomuselessfact.appspot.com/random.json?language=en', {
+      json: true
+    });
+  } catch (e) {
+    response = {
+      text: 'Uh-oh! An error occurred'
+    };
+  }
+
+  return {
+    version: '1.0',
+    response: {
+      outputSpeech: {
+        type: 'PlainText',
+        text: response.text,
+      },
+      shouldEndSession: true,
+    },
+  };
 };
