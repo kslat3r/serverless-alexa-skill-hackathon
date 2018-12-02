@@ -1,1 +1,1 @@
-# mocha-chai-supertest-hackathon
+# serverless-alexa-skill-hackathon

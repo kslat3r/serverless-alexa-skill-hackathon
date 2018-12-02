@@ -1,16 +1,14 @@
-## Mocha/Chai/Supertest workshop
+## Building your First Alexa Skill using the Serverless Framework
 
-### June 22nd 2018
+### December 6th 2018
 
 ---
 
 ### What we will cover
 
-* Mocha test runner and reporting
-* NYC test code coverage tool
-* Creating good assertions with Chai
-* Mocking functions using Sinon
-* Component testing your application using Supertest
+* How to use the Serverless Framework
+* How to configure your Alexa skill on the AWS platform
+* How to build your Alexa skill and get it to recognise basic commands
 
 *Bear in mind that this is a code-along!*
 
@@ -18,8 +16,8 @@
 
 ### What this is not
 
-* A best practices class on TDD
-* Ideally, tests should be written **before** functionality
+* An analysis of the various FaaS providers
+* How to publish your Alexa skill to Amazon
 
 ---
 
@@ -43,30 +41,25 @@
 
 ### Please clone the following repository from Github
 
-#### https://github.com/kslat3r/mocha-chai-supertest-hackathon
+#### https://github.com/kslat3r/serverless-alexa-skill-hackathon
 
 * Checkout the branch `step-one`
-* Make sure you have a `src/` directory and navigate to it
 
 ---
 
-## Starting the microservice
+## Creating your Servless framework template
 
 ---
 
 ### Steps to complete:
 
-* `npm install`
-* `npm start`
-* `http://localhost:3000/explorer`
+* `npm install -g serverless`
+* `serverless create --template aws-nodejs --path src`
+* Update src/serverless.yml with correct service name
 
 ---
 
-## Walkthrough of functionality
-
----
-
-## Introducing our test runner
+## Setting up your provider credentials
 
 ---
 
