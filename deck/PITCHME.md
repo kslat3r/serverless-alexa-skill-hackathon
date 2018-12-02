@@ -131,7 +131,7 @@
 ---
  
 * Add Skill Invocation Name
-* Add RandomFact intent
+* Add RandomFactIntent
 * Retrieve ARN of Lambda function
 * Update serverless.yml
 * Redeploy randomFact function

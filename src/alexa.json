@@ -1,17 +1,18 @@
 {
-  "interactionModel": {
-      "languageModel": {
-          "invocationName": "random fact",
-          "intents": [
-              {
-                  "name": "RandomFact",
-                  "slots": [],
-                  "samples": [
-                      "give me a random fact"
-                  ]
-              }
-          ],
-          "types": []
-      }
-  }
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "serverless",
+            "intents": [
+                {
+                    "name": "RandomFactIntent",
+                    "slots": [],
+                    "samples": [
+                        "random fact",
+                        "give me a random fact"
+                    ]
+                }
+            ],
+            "types": []
+        }
+    }
 }
