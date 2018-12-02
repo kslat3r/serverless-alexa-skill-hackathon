@@ -93,46 +93,23 @@
 * `cd src`
 * Deploy the function
   * `serverless deploy -v`
+  * `serverless deploy function -f hello`
 * Invoke the function
   * `serverless invoke -f hello -l`
 * Fetch the logs
-  * `serverless logs -f hellot -t`
+  * `serverless logs -f hello`
 
 ---
 
-## Adding some specs!
+## Building our random fact generator
 
 ---
 
 ### Specs to complete:
 
-* filters/todo.spec.js
-* mappers/todo.spec.js
-* models/user.spec.js
-* services/todo.spec.js
-* services/user.spec.js
-
----
-
-## Things to think about
-
-* Use `sinon` where appropriate to mock application dependencies outside of the units
-* Use `chai` where appropriate to create assertions against results
-
----
-
-## Writing some component tests
-
----
-
-### Steps to complete:
-
-* Install `supertest` HTTP assertion library
-* Configure `package.json` with a new NPM script to execute our component tests
-* In the directory `src/test/`, write component tests for:
-  * `GET /api/users`
-  * `GET /api/users/1`
-* **BONUS** add the `mochawesome` reporting tool
+* Build our random fact generator code
+* Remove our test function
+* Test our new function
 
 ---
 
