@@ -82,7 +82,8 @@
 
 ---
 
-## Adding some libraries
+## Publishing our example function
+### Checkout `step-two`
 
 ---
 
