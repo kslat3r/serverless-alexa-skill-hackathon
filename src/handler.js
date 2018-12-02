@@ -1,28 +1,52 @@
 'use strict';
 
 const request = require('request-promise');
+const alexa = require('ask-sdk-core');
 
-module.exports.randomFact = async (event, context) => {
-  let response;
+const randomFactHandler = {
+  canHandle(handlerInput) {
+    console.log(handlerInput);
 
-  try {
-    response = await request('http://randomuselessfact.appspot.com/random.json?language=en', {
+    return handlerInput.request.intent.name === 'RandomFact';
+  },
+
+  handle(handlerInput) {
+    return request('http://randomuselessfact.appspot.com/random.json?language=en', {
       json: true
-    });
-  } catch (e) {
-    response = {
-      text: 'Uh-oh! An error occurred'
-    };
-  }
+    })
+    .then((response) => {
+      return handlerInput.responseBuilder
+        .speak(response.text)
+        .getResponse();
+    })
+    .catch((err) => {
+      console.log(err);
 
-  return {
-    version: '1.0',
-    response: {
-      outputSpeech: {
-        type: 'PlainText',
-        text: response.text,
-      },
-      shouldEndSession: true,
-    },
-  };
+      return handlerInput.responseBuilder
+        .speak('Uh-oh! An error occurred')
+        .getResponse();
+    });
+  }
 };
+
+const errorHandler = {
+  canHandle() {
+    return true;
+  },
+
+  handle(handlerInput, error) {
+    console.log(`Error handled: ${error.message}`);
+
+    return handlerInput.responseBuilder
+      .speak('Sorry, I can\'t understand the command. Please say again.')
+      .reprompt('Sorry, I can\'t understand the command. Please say again.')
+      .getResponse();
+  }
+};
+
+const skillBuilder = alexa.SkillBuilders.custom();
+
+module.exports.randomFact = skillBuilder
+  .addRequestHandlers(randomFactHandler)
+  .addErrorHandler(errorHandler)
+  .lambda();
