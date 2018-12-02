@@ -16,11 +16,7 @@ const randomFactHandler = {
     .then((response) => {
       return handlerInput.responseBuilder
         .speak(response.text)
-        .getResponse();
-    })
-    .catch(() => {
-      return handlerInput.responseBuilder
-        .speak('Uh-oh! An error occurred')
+        .withSimpleCard('Random fact', response.text)
         .getResponse();
     });
   }
