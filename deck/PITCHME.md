@@ -30,7 +30,7 @@
 * A text editor (Visual Studio Code)
 * Node.js v8.9.4
 * NPM v5.6.0
-* *An AWS account* - get a free trial here https://aws.amazon.com/s/dm/optimization/server-side-test/free-tier/free_np/
+* **An AWS account** - get a free trial here https://aws.amazon.com/s/dm/optimization/server-side-test/free-tier/free_np/
 
 *Please double check you have the correct versions of Node/NPM*
 
