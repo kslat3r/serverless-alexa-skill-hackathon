@@ -1,0 +1,17 @@
+{
+  "interactionModel": {
+      "languageModel": {
+          "invocationName": "random fact",
+          "intents": [
+              {
+                  "name": "RandomFact",
+                  "slots": [],
+                  "samples": [
+                      "give me a random fact"
+                  ]
+              }
+          ],
+          "types": []
+      }
+  }
+}
