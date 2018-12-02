@@ -64,7 +64,7 @@
 
 ---
 
-![Video][https://www.youtube.com/embed/KngM5bfpttA]
+![Provider credentials](https://www.youtube.com/embed/KngM5bfpttA])
 
 ---
 
