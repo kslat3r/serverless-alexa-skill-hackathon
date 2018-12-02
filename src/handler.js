@@ -5,9 +5,8 @@ const alexa = require('ask-sdk-core');
 
 const randomFactHandler = {
   canHandle(handlerInput) {
-    console.log(handlerInput);
-
-    return handlerInput.request.intent.name === 'RandomFact';
+    return handlerInput.requestEnvelope.request 
+      && handlerInput.requestEnvelope.request.intent.name === 'RandomFactIntent';
   },
 
   handle(handlerInput) {
@@ -19,9 +18,7 @@ const randomFactHandler = {
         .speak(response.text)
         .getResponse();
     })
-    .catch((err) => {
-      console.log(err);
-
+    .catch(() => {
       return handlerInput.responseBuilder
         .speak('Uh-oh! An error occurred')
         .getResponse();
@@ -44,9 +41,7 @@ const errorHandler = {
   }
 };
 
-const skillBuilder = alexa.SkillBuilders.custom();
-
-module.exports.randomFact = skillBuilder
+module.exports.randomFact = alexa.SkillBuilders.custom()
   .addRequestHandlers(randomFactHandler)
   .addErrorHandlers(errorHandler)
   .lambda();
