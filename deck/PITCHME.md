@@ -113,4 +113,36 @@
 
 ---
 
+### Creating our Alexa skill
+
+* Checkout the branch `step-three`
+
+---
+
+### Specs to complete:
+
+* Navigate to https://developer.amazon.com/alexa/console/ask
+* Login
+* Create skill
+* Enter skill name
+* Use custom skill model
+* Start from scratch
+
+---
+ 
+* Add Skill Invocation Name
+* Add RandomFactIntent
+* Retrieve ARN of Lambda function
+* Update serverless.yml
+* Redeploy randomFact function
+* Add ARN to Endpoint dialog
+
+---
+
+* Save model
+* Build model
+* Test model!
+
+---
+
 ### Thank-you all very much!
