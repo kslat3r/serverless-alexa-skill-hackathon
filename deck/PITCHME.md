@@ -90,8 +90,13 @@
 
 ### Steps to complete:
 
-* Install `sinon`, a mocking library
-* Install `chai`, an assertion library
+* `cd src`
+* Deploy the function
+**`serverless deploy -v`
+* Invoke the function
+** `serverless invoke -f hello -l`
+* Fetch the logs
+** `serverless logs -f hellot -t`
 
 ---
 
