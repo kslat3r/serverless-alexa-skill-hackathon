@@ -92,11 +92,11 @@
 
 * `cd src`
 * Deploy the function
-**`serverless deploy -v`
+  * `serverless deploy -v`
 * Invoke the function
-** `serverless invoke -f hello -l`
+  * `serverless invoke -f hello -l`
 * Fetch the logs
-** `serverless logs -f hellot -t`
+  * `serverless logs -f hellot -t`
 
 ---
 
