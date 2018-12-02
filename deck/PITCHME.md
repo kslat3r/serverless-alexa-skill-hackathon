@@ -83,7 +83,8 @@
 ---
 
 ## Publishing our example function
-### Checkout `step-two`
+
+* Checkout the branch `step-two`
 
 ---
 
