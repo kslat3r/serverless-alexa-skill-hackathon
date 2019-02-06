@@ -1,6 +1,6 @@
 ## Building your First Alexa Skill using the Serverless Framework
 
-### December 6th 2018
+### February 7th 2019
 
 ---
 
