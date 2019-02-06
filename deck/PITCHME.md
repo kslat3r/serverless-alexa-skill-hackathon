@@ -132,10 +132,15 @@
  
 * Add Skill Invocation Name
 * Add RandomFactIntent
-* Retrieve ARN of Lambda function
-* Update serverless.yml
+* Add Utterances
+* Build your model!
+
+---
+
+* Retrieve Skill ID from Endpoint dialog
+* Update serverless.yml with Alexa skill ID
 * Redeploy randomFact function
-* Add ARN to Endpoint dialog
+* Add ARN of Lambda function to Endpoint dialog
 
 ---
 
