@@ -105,7 +105,7 @@
 
 ---
 
-### Specs to complete:
+### Steps to complete:
 
 * Build our random fact generator code
 * Remove our test function
@@ -119,7 +119,7 @@
 
 ---
 
-### Specs to complete:
+### Steps to complete:
 
 * Navigate to https://developer.amazon.com/alexa/console/ask
 * Login
@@ -129,18 +129,21 @@
 * Start from scratch
 
 ---
+
+### Steps to complete:
  
-* Add Skill Invocation Name
-* Add RandomFactIntent
-* Add Utterances
+* Add Intent "RandomFactIntent"
+* Add Utterances "random fact", "give me a random fact"
 * Build your model!
 
 ---
 
-* Retrieve Skill ID from Endpoint dialog
-* Update serverless.yml with Alexa skill ID
+### Steps to complete:
+
+* Click "Endpoint" on left menu
+* Retrieve Skill ID and update serverless.yml with Skill ID
 * Redeploy randomFact function
-* Add ARN of Lambda function to Endpoint dialog
+* Add ARN of Lambda function to "Default Region" textbox
 
 ---
 
